@@ -7,14 +7,13 @@
 
 import Cocoa
 
-@main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
+    private var statusItem: NSStatusItem!
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
